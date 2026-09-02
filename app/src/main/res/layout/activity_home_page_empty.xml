@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_image"
+    android:orientation="vertical">
+
+    <!-- Sector Superior Celeste -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Barra superior: Título, Perfil y Notificación -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Imagen de perfil -->
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="Foto de perfil"
+                android:src="@drawable/baseline_account_balance_wallet_24" />
+
+            <!-- Texto 1: "Inicio" -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Inicio"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Campanita de notificación -->
+            <ImageView
+                android:id="@+id/imgNotification"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="Campanita de notificación"
+                android:src="@android:drawable/ic_popup_reminder" />
+        </RelativeLayout>
+
+        <!-- Texto 2: Saludo al usuario -->
+        <TextView
+            android:id="@+id/tvUserGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="¡Hola, Usuario!"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <!-- Texto 3: Balance -->
+        <TextView
+            android:id="@+id/tvBalanceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Balance"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <!-- Texto 4: Cantidad de plata ($0) -->
+        <TextView
+            android:id="@+id/tvBalanceAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="$0"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Sector Blanco -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Botones de Acción -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Botón "Enviar dinero" (Fondo verde, bordes redondeados) -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSendMoney"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rounded_green"
+                android:text="Enviar dinero"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <!-- Botón "Ingresar dinero" (Fondo celeste, bordes redondeados) -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRequestMoney"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_rounded_celeste"
+                android:text="Ingresar dinero"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:text="Transacciones"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Transacciones: Empty State (Imagen y Texto indicando ausencia de transacciones) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!-- Imagen del Empty State -->
+            <ImageView
+                android:id="@+id/imgEmptyTransactions"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="No hay transacciones"
+                android:src="@drawable/baseline_account_balance_wallet_24" />
+
+            <!-- Texto del Empty State -->
+            <TextView
+                android:id="@+id/tvEmptyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="No tienes transacciones registradas aún."
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

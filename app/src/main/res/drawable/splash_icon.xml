@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Capa del Fondo del ícono (Transparente para tomar el fondo general) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+    <!-- Logo de la app posicionado en el centro (desplazado un poco hacia arriba) -->
+    <item
+        android:drawable="@drawable/baseline_account_balance_wallet_24"
+        android:width="100dp"
+        android:height="100dp"
+        android:gravity="center"
+        android:bottom="30dp" />
+
+</layer-list>
